@@ -15,9 +15,10 @@ document.getElementById('search-btn').addEventListener('click', () => {
 // Display Meal List
 const displayMeal = mealsList => {
   const displayMealsDiv = document.getElementById('display-meal');
+  displayMealsDiv.innerHTML = '';
   mealsList.forEach(meal => {
     const displayMealDiv= document.createElement('div');
-    displayMealDiv.classList.add('card');
+    displayMealDiv.className = 'card';
     const displayMealList = `
     <div onclick="displayMealDetail('${meal.idMeal}')">
       <img src="${meal.strMealThumb}" class="card-img-top" alt="...">
